@@ -30,11 +30,12 @@ function draw() {
   background(0);
   fill(255, 0, 0);
   rect(mouseX, height - 25, 100, 20);
+  fill(255, 255, 255);
+  circle(ball.x,ball.y,10);
   for (let brick of bricks) {
     fill(brick.color.r,brick.color.g,brick.color.b);
     rect(brick.x, brick.y, bricklength, brickheight);
   }
-  circle(ball.x,ball.y,10);
   ball.x += ball.xvel;
   ball.y += ball.yvel;
   if (paddlehit()) {
